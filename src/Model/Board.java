@@ -32,12 +32,11 @@ public class Board extends JPanel{
 			Board.gridy = y;	
 			Board.gridx = x;
 			
-			Board.ipadx = 5;
-			Board.ipady = 5;
+			Board.ipadx = 20;
+			Board.ipady = 20;
 			
 			Board_panel.add(new Default_Panel(Color.GRAY), Board);
-			
-			
+
 			}
 		}
 		
