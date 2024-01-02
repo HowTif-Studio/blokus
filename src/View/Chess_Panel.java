@@ -1,6 +1,8 @@
 package View;
 
 import java.awt.Color;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
@@ -22,7 +24,7 @@ public class Chess_Panel {
 		 Board board = new Board();
 		 JPanel panel_board = board.Board();
 		 
-		 JPanel panel5 = new JPanel();
+		 JPanel panel5 = new JPanel(new GridBagLayout());
 		 panel5.setBounds(600,0,600,800);
 		 //panel1.setBackground(Color.gray);
 		 
@@ -31,24 +33,44 @@ public class Chess_Panel {
 		 
 		 panel5.setBorder(BorderFactory.createLineBorder(Color.black));
 		 
-		 
-		 panel_board.setBounds(0,0,600,800);
-		 panel5.add(panel_board);
+		 GridBagConstraints gbc = new GridBagConstraints();
+		 gbc.gridx = 20;
+		 gbc.gridy = 30;
+		 gbc.gridwidth = 2;
+		 gbc.gridheight = 2;
+
+		 panel5.add(panel_board,gbc);
 		 
 		 // 加按鈕
 		 
 		 Button_Home button_home = new Button_Home();
+		 gbc.gridx = 10;
+		 gbc.gridy = 800;
+		 gbc.gridwidth = 2;
+		 gbc.gridheight = 2;
 		 panel5.add(button_home.b_home);
 		 
 		 
 		 Button_Pass button_pass = new Button_Pass();
-		 panel5.add(button_pass.b_pass);
+		 gbc.gridx = 20;
+		 gbc.gridy = 800;
+		 gbc.gridwidth = 2;
+		 gbc.gridheight = 2;
+		 panel5.add(button_pass.b_pass,gbc);
 		 
 		 Button_Quit button_quit = new Button_Quit();
-		 panel5.add(button_quit.b_quit);
+		 gbc.gridx = 30;
+		 gbc.gridy = 800;
+		 gbc.gridwidth = 2;
+		 gbc.gridheight = 2;
+		 panel5.add(button_quit.b_quit,gbc);
 		 
 		 Button_Restart button_restart = new Button_Restart();
-		 panel5.add(button_restart.b_restart);
+		 gbc.gridx = 40;
+		 gbc.gridy = 800;
+		 gbc.gridwidth = 2;
+		 gbc.gridheight = 2;
+		 panel5.add(button_restart.b_restart,gbc);
 		 
 //		 panel5.add(board.Board());
 		 
