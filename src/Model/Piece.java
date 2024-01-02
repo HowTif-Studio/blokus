@@ -1,15 +1,19 @@
 package Model;
 
 import java.awt.*;
-import java.awt.Color;  
-import java.awt.Graphics;  
+import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+
 import javax.swing.JComponent;  
 import javax.swing.JFrame;      
 import javax.swing.*;
 
 
 public class Piece {
-	
+
 	public JPanel Piece01 (Color color){
 		
 		JPanel piece01_panel = new JPanel(new GridBagLayout());
@@ -24,13 +28,58 @@ public class Piece {
         shape1.ipadx = 5;
         shape1.ipady = 5;
 		
-		//shape1.fill = GridBagConstraints.BOTH;
-		// 繼承 Square_Panel？
 		piece01_panel.add(new Default_Panel(color), shape1);
-
-        return piece01_panel;
 		
-	}
+//		https://blog.csdn.net/john_bian/article/details/52818599 參考文章
+		
+		piece01_panel.addMouseListener(new MouseListener() {
+			
+			Point point = new Point(0,0);
+			
+			@Override
+			public void mousePressed(MouseEvent e) {
+				point = SwingUtilities.convertPoint(piece01_panel,e.getPoint(),piece01_panel.getParent());
+				
+			}
+			
+			public void mouseDragged(MouseEvent e)
+			   {
+			      Point newPoint=SwingUtilities.convertPoint(piece01_panel,e.getPoint(),piece01_panel.getParent()); //转换坐标系统
+			      piece01_panel.setLocation(piece01_panel.getX()+(newPoint.x-point.x),piece01_panel.getY()+(newPoint.y-point.y)); //设置标签图片的新位置
+			      point=newPoint; //更改坐标点
+			   }
+
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				
+//				Point newPoint = SwingUtilities.convertPoint(piece01_panel,e.getPoint(),piece01_panel.getParent()); //转换坐标系统
+//				piece01_panel.setLocation(piece01_panel.getX()+(newPoint.x-point.x),piece01_panel.getY()+(newPoint.y - point.y)); //设置标签图片的新位置
+//			    point = newPoint;
+
+			}
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		return piece01_panel;
+		
+		}
+		
 	public JPanel Piece02 (Color color){
 		
 		JPanel piece02_panel = new JPanel(new GridBagLayout());
@@ -471,7 +520,6 @@ public class Piece {
         return piece10_panel;
 	
 	}
-	
 	public JPanel Piece11 (Color color){
 
 		
@@ -1124,4 +1172,5 @@ public class Piece {
 		
 	    return piece21_panel;
 	}
+
 }

@@ -15,6 +15,7 @@ public class Choose_Dialog {
 
 		JDialog dialog = new JDialog();
 
+
 		if(home_panel.Home() != 1){
 
 			String players[] = { "1" , "2" , "3" , "4" };
@@ -52,8 +53,52 @@ public class Choose_Dialog {
 			dialog.add(b2);
 			dialog.setSize(200, 200);
 			dialog.setVisible(true);
-		} else {
+		} 
+		
+		else {
 			dialog.setVisible(false);
+
+		
+		String players[] = { "1" , "2" , "3" , "4" };  
+		JComboBox cb = new JComboBox(players);  
+		
+		dialog.setLayout( new FlowLayout() );  
+		dialog.add(new JLabel ("請選擇玩家人數"));
+		
+		cb.setBounds(50,50,50,20);
+		dialog.add(cb);
+		
+		JButton b1 = new JButton ("開始遊戲");  
+		JButton b2 = new JButton ("離開");
+		
+		
+		b1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // 在此處放置按鈕被點擊時的行為
+            	//frame.setVisible(true);
+            	dialog.dispose();
+            	Game_Frame game_frame = new Game_Frame(false);// 創建 Game_Frame 的實例
+            	
+//            	game_frame.createAndShowGUI(); // 顯示 Game_Frame 中的 frame
+            	
+            }
+		});
+		
+		b2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // 在此處放置按鈕被點擊時的行為
+            	dialog.dispose();
+            }
+		});
+		
+		        
+		dialog.add(b1);
+		dialog.add(b2);
+		dialog.setSize(200, 200);
+		dialog.setVisible(true);
+		
+		return dialog;
+
 		}
 
 		return dialog;

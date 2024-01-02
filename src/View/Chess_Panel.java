@@ -40,6 +40,7 @@ public class Chess_Panel {
 		 Button_Home button_home = new Button_Home();
 		 panel5.add(button_home.b_home);
 		 
+		 
 		 Button_Pass button_pass = new Button_Pass();
 		 panel5.add(button_pass.b_pass);
 		 

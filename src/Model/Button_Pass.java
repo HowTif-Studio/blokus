@@ -5,11 +5,11 @@ import java.awt.event.*;
 
 public class Button_Pass {
 	
-	public JButton b_pass = new JButton();
+	public JButton b_pass = new JButton("跳過");
 	
 	JButton Button_Pass(){
 		
-		b_pass.setText("跳過");
+		//b_pass.setText("跳過");
 		b_pass.setBounds(600,200,80,30);
 		
 		b_pass.addActionListener ( new ActionListener() {

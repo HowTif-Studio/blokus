@@ -11,14 +11,14 @@ import Model.Piece;
 
 public class Game_Frame {
 	
-	JFrame frame = new JFrame();
+	public JFrame frame = new JFrame();
 	Chess_Panel chess_panel = new Chess_Panel();
 	Players_Panel players_panel = new Players_Panel();  
 	Home_Panel home_panel = new Home_Panel();
 	Choose_Dialog choose_dialog = new Choose_Dialog();
 	
 //	JFrame Game_Frame(){
-	Game_Frame(boolean needChoose){
+	public Game_Frame(boolean needChoose){
 		
         if(needChoose){
             frame.add(choose_dialog.Choose_Dialog(frame , "Dialog Example", true));
