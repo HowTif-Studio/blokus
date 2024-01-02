@@ -3,6 +3,8 @@ package Model;
 import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
@@ -32,10 +34,33 @@ public class Board extends JPanel{
 			Board.gridy = y;	
 			Board.gridx = x;
 			
-			Board.ipadx = 20;
-			Board.ipady = 20;
+			Board.ipadx = 15;
+			Board.ipady = 15;
 			
 			Board_panel.add(new Default_Panel(Color.GRAY), Board);
+
+				Board.gridy = y;
+				Board.gridx = x;
+
+				Board.ipadx = 15;
+				Board.ipady = 15;
+
+				Default_Panel square = new Default_Panel(Color.GRAY);
+				square.setPos_x(x);
+				square.setPos_y(y);
+				square.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseEntered(MouseEvent e) {
+						square.setColor(Color.BLUE);
+					}
+
+					@Override
+					public void mouseExited(MouseEvent e) {
+						square.setColor(Color.GRAY);
+					}
+				});
+				Board_panel.add(square, Board);
+
 
 			}
 		}
