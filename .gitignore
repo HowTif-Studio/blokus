@@ -4,3 +4,7 @@
 .project
 src/*.class
 .DS_Store
+*.iml
+./src/Model/*.class
+./src/Exception/*.class
+./src/View/*.class
