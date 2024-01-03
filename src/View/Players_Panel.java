@@ -45,6 +45,7 @@ public class Players_Panel {
 	 panel1.add(piece.Piece20(Color.BLUE));
 	 panel1.add(piece.Piece21(Color.BLUE));
 	 
+	 
 	 return panel1;
 	 //frame.setLayout(null);  
 	 //frame.add(panel1);

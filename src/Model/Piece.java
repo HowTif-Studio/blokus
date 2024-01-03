@@ -8,12 +8,13 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 import javax.swing.JComponent;  
-import javax.swing.JFrame;      
+import javax.swing.JFrame;
 import javax.swing.*;
 
 
 public class Piece {
 
+    
 	public JPanel Piece01 (Color color){
 		
 		JPanel piece01_panel = new JPanel(new GridBagLayout());
@@ -29,6 +30,7 @@ public class Piece {
         shape1.ipady = 5;
 		
 		piece01_panel.add(new Default_Panel(color), shape1);
+		
 		
 //		https://blog.csdn.net/john_bian/article/details/52818599 參考文章
 //		
