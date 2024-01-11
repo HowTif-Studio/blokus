@@ -1,12 +1,6 @@
 package View;
 
 import javax.swing.*;
-import javax.swing.border.Border;
-import java.awt.*;
-import Model.Board;
-import Model.Piece;
-
-
 
 
 public class Game_Frame {
@@ -40,6 +34,8 @@ public class Game_Frame {
 //        	return frame;
 
     public static void main(String[] args) {
+
         new Game_Frame(true);
+
     }
 }

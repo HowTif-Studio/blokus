@@ -13,7 +13,7 @@ import javax.swing.*;
 
 
 public class Piece {
-
+	Board board = new Board();
     
 	public JPanel Piece01 (Color color){
 		
@@ -30,8 +30,15 @@ public class Piece {
         shape1.ipady = 5;
 		
 		piece01_panel.add(new Default_Panel(color), shape1);
-		
-		
+		piece01_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece01_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
 //		https://blog.csdn.net/john_bian/article/details/52818599 參考文章
 //		
 //		piece01_panel.addMouseListener(new MouseListener() {
@@ -79,7 +86,6 @@ public class Piece {
 //			}
 //		});
 		return piece01_panel;
-		
 		}
 		
 	public JPanel Piece02 (Color color){
@@ -110,6 +116,16 @@ public class Piece {
 		
 		shape2.insets = new Insets(0,10,0,0); //調整間距
 		piece02_panel.add(new Default_Panel(color), shape2);
+
+		piece02_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece02_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
 
         return piece02_panel;
 		
@@ -153,6 +169,16 @@ public class Piece {
         shape3.insets = new Insets(0,10,0,0); //調整間距  
 		piece03_panel.add(new Default_Panel(color), shape3);
 
+		piece03_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece03_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
+
         return piece03_panel;
 		
 	}
@@ -193,6 +219,16 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
         shape4.insets = new Insets(0,0,0,0); //調整間距 
 		piece04_panel.add(new Default_Panel(color), shape4);
+
+		piece04_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece04_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
 		
         return piece04_panel;
 	
@@ -247,7 +283,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
         shape5.insets = new Insets(0,10,0,0); //調整間距 
 		piece05_panel.add(new Default_Panel(color), shape5);
-		
+		piece05_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece05_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
         return piece05_panel;
 	
 	}
@@ -299,7 +343,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
         shape6.insets = new Insets(0,0,0,0); //調整間距 
 		piece06_panel.add(new Default_Panel(color), shape6);
-		
+		piece06_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece06_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
         return piece06_panel;
 	
 	}
@@ -351,7 +403,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
         shape7.insets = new Insets(0,0,0,0); //調整間距 
 		piece07_panel.add(new Default_Panel(color), shape7);
-		
+		piece07_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece07_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
         return piece07_panel;
 	
 	}
@@ -403,7 +463,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
         shape8.insets = new Insets(0,0,0,0); //調整間距 
 		piece08_panel.add(new Default_Panel(color), shape8);
-		
+		piece08_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece08_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
         return piece08_panel;
 	
 	}
@@ -455,7 +523,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
         shape9.insets = new Insets(0,0,0,0); //調整間距 
 		piece09_panel.add(new Default_Panel(color), shape9);
-		
+		piece09_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece09_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
         return piece09_panel;
 	
 	}
@@ -518,7 +594,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
         shape10.insets = new Insets(0,0,0,0); //調整間距 
 		piece10_panel.add(new Default_Panel(color), shape10);
-		
+		piece10_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece10_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
         return piece10_panel;
 	
 	}
@@ -579,7 +663,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
         shape11.insets = new Insets(0,10,0,0); //調整間距 
 		piece11_panel.add(new Default_Panel(color), shape11);
-		
+		piece11_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece11_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
         return piece11_panel;
 	
 	}
@@ -640,7 +732,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
         shape12.insets = new Insets(0,0,0,0); //調整間距 
 		piece12_panel.add(new Default_Panel(color), shape12);
-		
+		piece12_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece12_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
         return piece12_panel; 
 	}
 	public JPanel Piece13 (Color color){
@@ -699,7 +799,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
 	    shape13.insets = new Insets(0,0,0,0); //調整間距 
 		piece13_panel.add(new Default_Panel(color), shape13);
-		
+		piece13_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece13_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
 	    return piece13_panel;
 	}
 	public JPanel Piece14 (Color color){
@@ -758,7 +866,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
 	    shape14.insets = new Insets(0,0,0,0); //調整間距 
 		piece14_panel.add(new Default_Panel(color), shape14);
-		
+		piece14_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece14_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
 	    return piece14_panel;
 	}
 	public JPanel Piece15 (Color color){
@@ -817,7 +933,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
 	    shape15.insets = new Insets(0,0,0,0); //調整間距 
 		piece15_panel.add(new Default_Panel(color), shape15);
-		
+		piece15_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece15_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
 	    return piece15_panel;
 	}
 	public JPanel Piece16 (Color color){
@@ -876,7 +1000,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
 	    shape16.insets = new Insets(0,0,0,0); //調整間距 
 		piece16_panel.add(new Default_Panel(color), shape16);
-		
+		piece16_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece16_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
 	    return piece16_panel;
 	}
 	public JPanel Piece17 (Color color){
@@ -935,7 +1067,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
 	    shape17.insets = new Insets(0,0,0,0); //調整間距 
 		piece17_panel.add(new Default_Panel(color), shape17);
-		
+		piece17_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece17_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
 	    return piece17_panel;
 	}
 	public JPanel Piece18 (Color color){
@@ -994,7 +1134,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
 	    shape18.insets = new Insets(0,0,0,0); //調整間距 
 		piece18_panel.add(new Default_Panel(color), shape18);
-		
+		piece18_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece18_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
 	    return piece18_panel;
 	}
 	public JPanel Piece19 (Color color){
@@ -1053,7 +1201,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
 	    shape19.insets = new Insets(0,0,0,0); //調整間距 
 		piece19_panel.add(new Default_Panel(color), shape19);
-		
+		piece19_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece19_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
 	    return piece19_panel;
 	}
 	public JPanel Piece20 (Color color){
@@ -1112,7 +1268,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
 	    shape20.insets = new Insets(0,0,0,0); //調整間距 
 		piece20_panel.add(new Default_Panel(color), shape20);
-		
+		piece20_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece20_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
 	    return piece20_panel;
 	}
 	public JPanel Piece21 (Color color){
@@ -1171,7 +1335,15 @@ public class Piece {
 		//shape3.fill = GridBagConstraints.BOTH;
 	    shape21.insets = new Insets(0,0,0,0); //調整間距 
 		piece21_panel.add(new Default_Panel(color), shape21);
-		
+		piece21_panel.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				board.removeAll(); //清除 board 上的所有元件
+				board.add(piece21_panel);
+				board.revalidate();
+				board.repaint();
+			}
+		});
 	    return piece21_panel;
 	}
 
